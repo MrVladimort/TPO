@@ -26,7 +26,7 @@ class GUI extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container container = this.getContentPane();
-        container.setLayout(new GridLayout(5, 0, 0, 0));
+        container.setLayout(new BoxLayout(container, BoxLayout.PAGE_AXIS));
 
         JLabel labelCountry = new JLabel("Country: ");
         container.add(labelCountry);
@@ -48,39 +48,16 @@ class GUI extends JFrame {
 
     private void startService() {
         service = new Service(inputCountry.getText());
-        String weatherJson = service.getWeather(inputCity.getText());
-        getWeatherData(weatherJson);
 
         try {
+            weather = service.getWeather(inputCity.getText());
             rateForS = "" + service.getRateFor(inputRate.getText());
             rateNBPS = "" + service.getNBPRate();
-        } catch (IOException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
 
         startWiki(service.city);
-    }
-
-    private void getWeatherData(String weatherJson) {
-        JSONObject obj, objTemp;
-        JSONArray arrayWeather;
-        String weatherDescription = "";
-        double weatherTemperature = 0.0;
-
-        try {
-            obj = new JSONObject(weatherJson);
-            objTemp = obj.getJSONObject("main");
-            arrayWeather = obj.getJSONArray("weather");
-            weatherTemperature = objTemp.getDouble("temp");
-
-            for (int i = 0; i < arrayWeather.length(); i++)
-                weatherDescription = arrayWeather.getJSONObject(i).getString("description");
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        weather = weatherDescription + ", " + weatherTemperature;
     }
 
     private void startWiki(String setCity) {
@@ -110,7 +87,7 @@ class GUI extends JFrame {
         public void actionPerformed(ActionEvent e) {
             startService();
             String message = "";
-            message += "Hi, it'service " + service.city + "\n";
+            message += "Hi, it's " + service.city + "\n";
             message += "Weather: " + weather + "\n";
             message += "Get Rate For " + service.currencyCountry + " to " + service.currency + ": " + rateForS + "\n";
             message += "Get PLN rate to " + service.currencyCountry + ": " + rateNBPS + "\n";
