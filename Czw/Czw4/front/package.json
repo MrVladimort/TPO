@@ -1,0 +1,47 @@
+{
+  "name": "bees-front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "google-maps-react": "^1.1.4",
+    "history": "^4.7.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.20.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-datepicker": "^1.1.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-css": "^2.2.14",
+    "semantic-ui-react": "^0.77.2",
+    "validator": "^9.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start ",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.6.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "prettier": "^1.10.2",
+    "redux-devtools-extension": "^2.13.2"
+  }
+}
+
