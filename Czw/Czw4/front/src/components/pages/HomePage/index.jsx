@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import {Dimmer, Form, Grid, Loader, Table} from "semantic-ui-react";
+import {Form, Grid, Table} from "semantic-ui-react";
 import booksApi from "../../../api/books";
-import _ from 'lodash';
-
 
 class HomePage extends Component {
     state = {
@@ -56,7 +53,7 @@ class HomePage extends Component {
                             <Form.Input label={'Autor'} id={'autor'} name={'autor'} onChange={this.onFormChange}/>
                             <Form.Input label={'Rok'} id={'rok'} name={'rok'} onChange={this.onFormChange}/>
                         </Form.Group>
-                        <Form.Button fluid submit primary content={'Search'}/>
+                        <Form.Button fluid primary content={'Search'}/>
                     </Form>
                 </Grid.Row>
                 <Grid.Row>

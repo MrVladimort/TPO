@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Fri Jun 01 19:52:38 CEST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0163-bc7a-dca5-000006204fd0 
-on database directory C:\Users\maxvel\Desktop\PJWSTK\TPO\Czw4_Vladik\src\main\resources\db\DerbyDbs\ksidb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73a8dfcc 
-Loaded from file:/C:/Users/maxvel/.m2/repository/org/apache/derby/derby/10.14.1.0/derby-10.14.1.0.jar
+Mon Jun 04 22:24:14 CEST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0163-cc78-bb83-00000ba262c0 
+on database directory E:\Workspace\IntelliJIDEA\TPO\Czw\Czw4\src\main\resources\db\DerbyDbs\ksidb with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/C:/Users/Gravv/.m2/repository/org/apache/derby/derby/10.14.1.0/derby-10.14.1.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=9.0.1+11
-user.dir=C:\Users\maxvel\Desktop\PJWSTK\TPO\Czw4_Vladik
+java.runtime.version=1.8.0_152-b16
+user.dir=E:\Workspace\IntelliJIDEA\TPO\Czw\Czw4
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
