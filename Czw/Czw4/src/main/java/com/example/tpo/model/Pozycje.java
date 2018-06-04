@@ -54,6 +54,18 @@ public class Pozycje implements Serializable {
         return tytul;
     }
 
+    public void setTytul(String tytul) {
+        this.tytul = tytul;
+    }
+
+    public void setRok(Long rok) {
+        this.rok = rok;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
     public Long getRok() {
         return rok;
     }
