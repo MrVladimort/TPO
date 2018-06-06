@@ -19,5 +19,5 @@ public interface PozycjeRepository extends JpaRepository<Pozycje, String> {
     List<Pozycje> findByTytulContainingAndAutor(String tytul, Autor autor);
 
     @Query("SELECT p FROM Pozycje p WHERE UPPER(p.tytul) LIKE upper(CONCAT('%',:tytul,'%')) AND p.autor=:id")
-    List<Pozycje> findSuka(@Param("tytul") String username, @Param("id") Autor autor);
+    List<Pozycje> findPozycjeWithTytulPlusAutor(@Param("tytul") String username, @Param("id") Autor autor);
 }

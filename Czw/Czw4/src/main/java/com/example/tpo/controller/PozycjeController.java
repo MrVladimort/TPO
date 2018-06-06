@@ -37,7 +37,7 @@ public class PozycjeController {
                         Long.parseLong(filter.getRok()), a);
                 lp.addAll(tmp);
             } else {
-                List<Pozycje> tmp = pozycjeRepository.findSuka(filter.getTytul() != null ? filter.getTytul() : "", a);
+                List<Pozycje> tmp = pozycjeRepository.findPozycjeWithTytulPlusAutor(filter.getTytul() != null ? filter.getTytul() : "", a);
                 lp.addAll(tmp);
             }
         }
